@@ -34,13 +34,14 @@ person$hobby[1]
 person[[4]]
 person[[4]][2]
 
-# LAB2 R카페 매출 분석 2
+## R카페 매출 분석 2
 cafe <- list(espresso = c(4,5,3,6,5,4,7),
              americano = c(63,68,64,68,72,89,94),
              latte = c(61,70,59,71,71,92,88),
              price = c(2000, 2500, 3000),
-             menu = c('espresso', 'americano', 'latte'))
-cafe$menu
+             menu = c('espresso','americano','latte'))
+
+cafe
 
 cafe$menu <- factor(cafe$menu)
 cafe$menu
@@ -48,22 +49,25 @@ cafe$menu
 names(cafe$price) <- cafe$menu
 cafe$price
 
-sale.espresso <- cafe$price['espresso'] * cafe$espresso
+sale.espresso <- cafe$espresso * cafe$price[1]  
+sale.espresso <- cafe$espresso * cafe$price['espresso']
 sale.espresso
-sale.americano <- cafe$price['americano'] * cafe$americano
+
+sale.americano <- cafe$americano * cafe$price['americano']
 sale.americano
-sale.latte <- cafe$price['latte'] * cafe$latte
+
+sale.latte <- cafe$latte * cafe$price['latte']
 sale.latte
 
 sale.day <- sale.espresso + sale.americano + sale.latte
 sale.day
 sale.total <- sum(sale.day)
-sale.day
+sale.total
 
 sale.mean.new <- mean(sale.day)
 sale.mean.new
 
-names(sale.day) <- c('Mon','Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
+names(sale.day) <- c('Mon','Tue','Wed','Thu','Fry','Sat','Sun')
 sale.day
 
 names(sale.day[sale.day >= sale.mean.new])
