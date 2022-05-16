@@ -1,0 +1,12 @@
+height weight bmi
+177 74 23.62029
+
+> cat('height', 'weight', 'bmi\n')
+height weight bmi
+
+> cat(height.unit * 100, weight, bmi)
+  
+> cat('\n')
+
+
+> sink()
