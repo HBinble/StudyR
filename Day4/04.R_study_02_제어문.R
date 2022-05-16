@@ -134,3 +134,5 @@ apply(iris[,1:4], 2, sum)
 apply(iris[,1:4], 2, median)
 apply(iris[,1:4], 2, max)
 
+
+  
