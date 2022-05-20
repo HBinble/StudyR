@@ -8,12 +8,15 @@ str(GNI2014)
 GNI2014$country
 head(GNI2014)
 
-treemap(GNI2014, index=c('continent', 'iso3'),
-        vSize = 'population', vColor = 'GNI',
+treemap(GNI2014, 
+        index=c('continent', 'iso3')
+        vSize = 'population', 
+        vColor = 'GNI',
         title = '대륙간 인구수/GNI',
-        type = 'value', na.rm = T,
+        type = 'value', 
+        na.rm = T,
         # bg.labels = 'yellow', # 사용불가
-)
+        )
 
 ## LAB 미국 주요도시 통계 데이터 분석
 library(carData)
@@ -29,7 +32,7 @@ treemap(ds,
         vColor = 'crime',
         type = 'value',
         title = '미국 막장도시 찾기',
-)
+        )
 
 
 ## 레이다차트
